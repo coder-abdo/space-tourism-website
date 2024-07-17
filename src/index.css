@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.home {
+  @apply absolute top-0 left-0 right-0 bottom-0 z-0;
+  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (min-width: 768px) {
+    background-image: url("./assets/home/background-home-desktop.jpg");
+  }
+  @media (min-width: 1024px) {
+    background-image: url("./assets/home/background-home-desktop.jpg");
+  }
+}
+.with-beam {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #979797;
+    left: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 560px;
+    height: 2px;
+  }
+}
+@media (width <= 768px) {
+  .with-beam::after {
+    display: none;
+  }
+}
