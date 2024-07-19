@@ -7,6 +7,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Bellefair", serif;
 }
 
 .home {
@@ -22,21 +23,55 @@ body {
     background-image: url("./assets/home/background-home-desktop.jpg");
   }
 }
+.destination {
+  @apply absolute top-0 left-0 right-0 bottom-0 z-0;
+  background-image: url("./assets/destination/background-destination-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (min-width: 768px) {
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
+  }
+  @media (min-width: 1024px) {
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+  }
+}
 .with-beam {
   position: relative;
   &::after {
     content: "";
     position: absolute;
     display: block;
-    background-color: #979797;
-    left: 180px;
+    background-color: #fff;
+    left: 100px;
     top: 50%;
     transform: translateY(-50%);
     width: 560px;
-    height: 2px;
+    height: 1.5px;
   }
 }
-@media (width <= 768px) {
+.another-font {
+  font-family: "Barlow Condensed", sans-serif;
+}
+.explore-btn {
+  @apply relative w-28 h-28 md:h-40 md:w-40 lg:w-[250px] lg:h-[250px] rounded-[100%] bg-white text-indigo-950 text-sm md:text-lg lg:text-xl uppercase flex justify-center items-center;
+}
+.explore-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.explore-btn:hover::after {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+@media (width <= 992px) {
   .with-beam::after {
     display: none;
   }

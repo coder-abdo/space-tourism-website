@@ -10,11 +10,11 @@ export const Navbar = () => {
       <Link to={"/"} className="with-beam">
         <img src={LogoIcon} alt="space tourism logo" />
       </Link>
-      <ul className="hidden sm:flex sm:gap-8 p-2 sm:px-6 sm:py-4 sm:to-transparent sm:from-transparent md:px-24 md:py-6 items-center md:bg-gradient-to-r md:from-slate-400/55 md:to-slate-700/65">
+      <ul className="hidden sm:flex sm:gap-8 p-2 sm:px-6 sm:py-4 sm:to-transparent sm:from-transparent md:px-24 md:py-6 items-center md:bg-gradient-to-r md:from-[#d0d6f9] md:to-slate-[#0b0d17]">
         <li>
           <Link
             to={"/"}
-            className="flex gap-2 text-white items-center [&.active]:border-l-white [&.active]:border-l sm:[&.active]:border-b-white sm:[&.active]:border-b sm:[&.active]:border-l-transparent py-3"
+            className="flex gap-2 text-white items-center sm:text-2xl text-sm [&.active]:border-l-white [&.active]:border-l sm:[&.active]:border-b-white sm:[&.active]:border-b sm:[&.active]:border-l-transparent py-3 font-bold"
           >
             <strong>00</strong>
             <span>Home</span>
@@ -23,7 +23,7 @@ export const Navbar = () => {
         <li>
           <Link
             to={"/destination"}
-            className="flex gap-2 text-white items-center [&.active]:border-b-white"
+            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-b-white"
           >
             <strong>01</strong>
             <span>Destination</span>
@@ -32,7 +32,7 @@ export const Navbar = () => {
         <li>
           <Link
             to={"/crew"}
-            className="flex gap-2 text-white items-center [&.active]:border-b-white"
+            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-b-white"
           >
             <strong>02</strong>
             <span>Crew</span>
@@ -41,7 +41,7 @@ export const Navbar = () => {
         <li>
           <Link
             to={"/technology"}
-            className="flex gap-2 text-white items-center [&.active]:border-b-white"
+            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-b-white"
           >
             <strong>03</strong>
             <span>Technology</span>
