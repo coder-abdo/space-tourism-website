@@ -1,49 +1,53 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import LogoIcon from "@/assets/shared/logo.svg";
 import MenuIcon from "@/assets/shared/icon-hamburger.svg";
 import MenuCloseIcon from "@/assets/shared/icon-close.svg";
 import { useState } from "react";
 export const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const location = useLocation();
+
   return (
     <nav className="flex justify-between items-center p-2 md:py-4 z-10 relative">
       <Link to={"/"} className="with-beam">
         <img src={LogoIcon} alt="space tourism logo" />
       </Link>
-      <ul className="hidden sm:flex sm:gap-8 p-2 sm:px-6 sm:py-4 sm:to-transparent sm:from-transparent md:px-24 md:py-6 items-center md:bg-gradient-to-r md:from-[#d0d6f9] md:to-slate-[#0b0d17]">
+      <ul
+        className={`hidden sm:flex sm:gap-8 px-2 sm:px-6 sm:to-transparent sm:from-transparent md:px-24  items-center ${location.pathname === "/" ? "md:bg-gradient-to-r md:from-[#d0d6f9] md:to-slate-[#0b0d17]" : "bg-white/5"} another-font transition-colors`}
+      >
         <li>
           <Link
             to={"/"}
-            className="flex gap-2 text-white items-center sm:text-2xl text-sm [&.active]:border-l-white [&.active]:border-l sm:[&.active]:border-b-white sm:[&.active]:border-b sm:[&.active]:border-l-transparent py-3 font-bold"
+            className="flex gap-2 text-white items-center sm:text-2xl text-sm [&.active]:border-l-white [&.active]:border-l sm:[&.active]:border-b-white sm:[&.active]:border-b sm:[&.active]:border-l-transparent py-3 md:py-8"
           >
-            <strong>00</strong>
+            <strong className=" font-bold">00</strong>
             <span>Home</span>
           </Link>
         </li>
         <li>
           <Link
             to={"/destination"}
-            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-b-white"
+            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-l-white [&.active]:border-l sm:[&.active]:border-b-white sm:[&.active]:border-b sm:[&.active]:border-l-transparent py-3 md:py-8"
           >
-            <strong>01</strong>
+            <strong className=" font-bold">01</strong>
             <span>Destination</span>
           </Link>
         </li>
         <li>
           <Link
             to={"/crew"}
-            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-b-white"
+            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-l-white [&.active]:border-l sm:[&.active]:border-b-white sm:[&.active]:border-b sm:[&.active]:border-l-transparent py-3 md:py-8"
           >
-            <strong>02</strong>
+            <strong className=" font-bold">02</strong>
             <span>Crew</span>
           </Link>
         </li>
         <li>
           <Link
             to={"/technology"}
-            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-b-white"
+            className="flex gap-2 sm:text-2xl text-sm text-white items-center [&.active]:border-l-white [&.active]:border-l sm:[&.active]:border-b-white sm:[&.active]:border-b sm:[&.active]:border-l-transparent py-3 md:py-8"
           >
-            <strong>03</strong>
+            <strong className=" font-bold">03</strong>
             <span>Technology</span>
           </Link>
         </li>

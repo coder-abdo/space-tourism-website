@@ -10,12 +10,14 @@ body {
   font-family: "Bellefair", serif;
 }
 
-.home {
+main:is(.home, .destination) {
   @apply absolute top-0 left-0 right-0 bottom-0 z-0;
-  background-image: url("./assets/home/background-home-mobile.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  overflow-y: scroll;
+}
+.home {
+  background-image: url("./assets/home/background-home-mobile.jpg");
   @media (min-width: 768px) {
     background-image: url("./assets/home/background-home-desktop.jpg");
   }
@@ -24,11 +26,7 @@ body {
   }
 }
 .destination {
-  @apply absolute top-0 left-0 right-0 bottom-0 z-0;
   background-image: url("./assets/destination/background-destination-mobile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   @media (min-width: 768px) {
     background-image: url("./assets/destination/background-destination-desktop.jpg");
   }
@@ -42,19 +40,22 @@ body {
     content: "";
     position: absolute;
     display: block;
-    background-color: #fff;
-    left: 100px;
+    background-color: #979797;
+    left: 290%;
     top: 50%;
     transform: translateY(-50%);
     width: 560px;
     height: 1.5px;
   }
 }
-.another-font {
+.another-font:is(p, div, h1, h2, h3, h4, h5, h6, span, ul, nav, button) {
   font-family: "Barlow Condensed", sans-serif;
 }
 .explore-btn {
   @apply relative w-28 h-28 md:h-40 md:w-40 lg:w-[250px] lg:h-[250px] rounded-[100%] bg-white text-indigo-950 text-sm md:text-lg lg:text-xl uppercase flex justify-center items-center;
+  @media (width <= 992px) {
+    display: none;
+  }
 }
 .explore-btn::after {
   content: "";
