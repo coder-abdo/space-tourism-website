@@ -10,7 +10,7 @@ body {
   font-family: "Bellefair", serif;
 }
 
-main:is(.home, .destination) {
+main:is(.home, .destination, .crew) {
   @apply absolute top-0 left-0 right-0 bottom-0 z-0;
   background-size: cover;
   background-position: center;
@@ -19,7 +19,7 @@ main:is(.home, .destination) {
 .home {
   background-image: url("./assets/home/background-home-mobile.jpg");
   @media (min-width: 768px) {
-    background-image: url("./assets/home/background-home-desktop.jpg");
+    background-image: url("./assets/home/background-home-tablet.jpg");
   }
   @media (min-width: 1024px) {
     background-image: url("./assets/home/background-home-desktop.jpg");
@@ -28,10 +28,19 @@ main:is(.home, .destination) {
 .destination {
   background-image: url("./assets/destination/background-destination-mobile.jpg");
   @media (min-width: 768px) {
-    background-image: url("./assets/destination/background-destination-desktop.jpg");
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
   }
   @media (min-width: 1024px) {
-    background-image: url("./assets/destination/background-destination-tablet.jpg");
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
+  }
+}
+.crew {
+  background-image: url("./assets/crew/background-crew-mobile.jpg");
+  @media (min-width: 768px) {
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+  }
+  @media (min-width: 1024px) {
+    background-image: url("./assets/crew/background-crew-desktop.jpg");
   }
 }
 .with-beam {
@@ -53,9 +62,9 @@ main:is(.home, .destination) {
 }
 .explore-btn {
   @apply relative w-28 h-28 md:h-40 md:w-40 lg:w-[250px] lg:h-[250px] rounded-[100%] bg-white text-indigo-950 text-sm md:text-lg lg:text-xl uppercase flex justify-center items-center;
-  @media (width <= 992px) {
-    display: none;
-  }
+  /*@media (width <= 992px) {*/
+  /*  display: none;*/
+  /*}*/
 }
 .explore-btn::after {
   content: "";

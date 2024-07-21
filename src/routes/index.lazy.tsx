@@ -6,8 +6,8 @@ export const Route = createLazyFileRoute("/")({
 
 function Index() {
   return (
-    <main className="home h-full flex flex-col justify-end lg:flex-row items-center lg:items-end py-4 lg:pb-8 lg:justify-between lg:px-24">
-      <section className="flex flex-col justify-center mb-4 lg:mb-0 items-center lg:items-start gap-2 md:gap-4 lg:gap-6 lg:basis-1/2">
+    <main className="home h-full min-h-screen flex flex-col justify-start lg:flex-row items-start lg:items-end py-4 lg:pb-8 lg:justify-between lg:px-24">
+      <section className="flex flex-col mb-12 pt-24 lg:pt-2 justify-start lg:mb-0 items-center lg:items-start gap-2 md:gap-4 lg:gap-6 lg:basis-1/2">
         <h3 className="text-sm md:text-lg lg:text-xl text-blue-100 font-thin">
           SO, YOU WANT TO TRAVEL TO
         </h3>
@@ -21,7 +21,7 @@ function Index() {
           experience!
         </p>
       </section>
-      <div className="flex lg:justify-center lg:items-center lg:basis-1/2">
+      <div className="flex justify-center items-center w-full lg:basis-1/2">
         <Link to="/destination" className="explore-btn">
           explore
         </Link>

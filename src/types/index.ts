@@ -7,4 +7,11 @@ type DestinationType = {
   time: string;
 };
 
-export type { DestinationType, DestinationNameType };
+type CrewType = {
+  name: string;
+  role: string;
+  bio: string;
+  img: string;
+};
+
+export type { DestinationType, DestinationNameType, CrewType };
