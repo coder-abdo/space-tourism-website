@@ -30,7 +30,7 @@ function Technology() {
               <li
                 onClick={() => handleClick(idx)}
                 key={tech.title}
-                className={`lg:w-20 lg:h-20 md:w-14 md:h-14 w-10 h-10 cursor-pointer text-white flex justify-center items-center text-sm md:text-lg lg:text-xl rounded-[100%] bg-transparent border border-white/50 ${currentIndex === idx ? "bg-white text-indigo-950 border-transparent" : ""} `}
+                className={`lg:w-20 lg:h-20 md:w-14 md:h-14 w-10 h-10 cursor-pointer text-white flex justify-center items-center text-sm md:text-lg lg:text-xl rounded-[100%] bg-transparent border border-white/50 ${currentIndex === idx ? "bg-white text-black border-transparent" : ""} `}
               >
                 {idx + 1}
               </li>
