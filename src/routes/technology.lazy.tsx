@@ -30,7 +30,7 @@ function Technology() {
               <li
                 onClick={() => handleClick(idx)}
                 key={tech.title}
-                className={`lg:w-20 lg:h-20 md:w-14 md:h-14 w-10 h-10 cursor-pointer text-white flex justify-center items-center text-sm md:text-lg lg:text-xl rounded-[100%] bg-transparent border border-white/50 ${currentIndex === idx ? "bg-white text-black border-transparent" : ""} `}
+                className={`lg:w-20 lg:h-20 md:w-14 md:h-14 w-10 h-10 cursor-pointer text-white flex justify-center items-center text-sm md:text-lg lg:text-xl rounded-[100%] bg-transparent border border-white/50 ${currentIndex === idx ? "bg-white text-indigo-900 border-transparent" : ""} `}
               >
                 {idx + 1}
               </li>
@@ -40,10 +40,10 @@ function Technology() {
             <h2 className="text-sm md:text-lg lg:text-xl text-white/50">
               {Techs[currentIndex].subtitle}
             </h2>
-            <h1 className="text-lg md:text-2xl lg:text-5xl lg:mb-4 text-white">
+            <h1 className="text-lg md:text-2xl lg:text-5xl lg:mb-4 text-white uppercase">
               {Techs[currentIndex].title}
             </h1>
-            <p className="text-sm md:text-lg text-blue-100 lg:px-4 px-8">
+            <p className="text-sm md:text-lg text-blue-100 lg:px-4 px-8 another-font">
               {Techs[currentIndex].description}
             </p>
           </div>
