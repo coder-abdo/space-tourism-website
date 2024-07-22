@@ -14,4 +14,14 @@ type CrewType = {
   img: string;
 };
 
-export type { DestinationType, DestinationNameType, CrewType };
+type TechType = {
+  title: string;
+  subtitle: string;
+  img: {
+    landscape: string;
+    portrait: string;
+  };
+  description: string;
+};
+
+export type { DestinationType, DestinationNameType, CrewType, TechType };

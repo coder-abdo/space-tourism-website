@@ -1,4 +1,4 @@
-import { CrewType, DestinationType } from "@/types";
+import { CrewType, DestinationType, TechType } from "@/types";
 // destination images
 import moonImage from "@/assets/destination/image-moon.png";
 import marsImage from "@/assets/destination/image-mars.png";
@@ -9,6 +9,13 @@ import Douglas from "@/assets/crew/image-douglas-hurley.png";
 import Mark from "@/assets/crew/image-mark-shuttleworth.png";
 import Victor from "@/assets/crew/image-victor-glover.png";
 import Anousheh from "@/assets/crew/image-anousheh-ansari.png";
+// techs images
+import Launch from "@/assets/technology/image-launch-vehicle-landscape.jpg";
+import LaunchPortrait from "@/assets/technology/image-launch-vehicle-portrait.jpg";
+import SpacePort from "@/assets/technology/image-spaceport-landscape.jpg";
+import SpacePortPortrait from "@/assets/technology/image-spaceport-portrait.jpg";
+import SpaceCapsule from "@/assets/technology/image-space-capsule-landscape.jpg";
+import SpaceCapsulePortrait from "@/assets/technology/image-space-capsule-portrait.jpg";
 
 const crews: CrewType[] = [
   {
@@ -70,4 +77,38 @@ const destinations: DestinationType[] = [
     time: "7 years",
   },
 ];
-export { destinations, crews };
+
+// tech
+const Techs: TechType[] = [
+  {
+    title: "LAUNCH VEHICLE",
+    img: {
+      landscape: Launch,
+      portrait: LaunchPortrait,
+    },
+    subtitle: "The terminology...",
+    description:
+      "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
+  },
+  {
+    title: "spaceport",
+    subtitle: "The terminology...",
+    img: {
+      landscape: SpacePort,
+      portrait: SpacePortPortrait,
+    },
+    description:
+      "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
+  },
+  {
+    title: "space capsule",
+    subtitle: "The terminology...",
+    img: {
+      landscape: SpaceCapsule,
+      portrait: SpaceCapsulePortrait,
+    },
+    description:
+      "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
+  },
+];
+export { destinations, crews, Techs };
